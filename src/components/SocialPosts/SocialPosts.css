@@ -1,0 +1,48 @@
+/* section.SocialPosts {
+} */
+
+section.SocialPosts h1.PostsTitle {
+    color: #03a9f4;
+    text-align: center;
+}
+
+
+section.SocialPosts .hidden {
+    display: none;
+}
+
+section.SocialPosts button.NewThoughtBtn {
+    background-color: #03a9f4;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    color: white;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+
+}
+
+
+/* Post Form Styling */
+section.SocialPosts div.socialForm {
+    background: #79c5e8;
+    padding: 15px;
+    margin: 10 0;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+
+/* list of posts container */
+
+section.SocialPosts div.postsContainer {
+    border-style: solid;
+    border-width: 2px;
+    background-color: white;
+    margin: 10px 0;
+    padding: 20px 30px;
+    border-radius: 8px;
+}

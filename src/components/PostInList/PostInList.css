@@ -1,0 +1,12 @@
+div.PostInList {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+div.PostInList button.deleteButton {
+    background: white;
+    border-style: none;
+
+}
+

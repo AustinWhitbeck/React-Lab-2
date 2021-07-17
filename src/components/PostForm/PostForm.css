@@ -1,0 +1,41 @@
+
+form.PostForm div.closeButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+form.PostForm button.closeButton {
+    background: none;
+    border-style: none;
+}
+
+form.PostForm div.postFields {
+    display: flex;
+    flex-direction: column;
+}
+
+
+form.PostForm input.inputTitle {
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+    margin:20px 0;
+}
+
+form.PostForm input.inputThought {
+    height: 80px;
+    border-radius: 10px;
+    border-style: none;
+    margin:20px 0;
+}
+
+form.PostForm button.addPostButton {
+    width: 100%;;
+    height: 30px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+
+}
+
