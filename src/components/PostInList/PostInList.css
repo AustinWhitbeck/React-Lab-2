@@ -1,12 +1,60 @@
 div.PostInList {
     display: flex;
     justify-content: space-between;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(187, 187, 187);
+    border-bottom-width: 1px;
+}
 
+div.PostInList section.votePostContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+div.PostInList div.upvoteContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+div.PostInList div.counterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 10px;
+}
+
+div.PostInList div.likeDislikeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 20px 0 0;
+}
+
+div.PostInList button.likesButtons {
+    background: none;
+    border-style: none;
+}
+
+div.PostInList p.userTitle {
+    font-size: 30px;
+    font-weight:bolder;
+    margin: 20px 0 2px 0;
+}
+
+div.PostInList p.userThought {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 2px 0 2px;
+}
+
+
+div.PostInList div.trashBtnContainer {
+    display: flex;
+    align-items: center;
 }
 
 div.PostInList button.deleteButton {
     background: white;
     border-style: none;
-
 }
 

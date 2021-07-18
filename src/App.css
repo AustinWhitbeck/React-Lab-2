@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Homemade+Apple&display=swap');
+
 body {
   background-color: #f3f1f7;
-  padding: 20px 100px
+  padding: 20px 100px;
+  font-family: 'Dosis', sans-serif;
+}
+
+h1 {
+  font-family: 'Homemade Apple';
 }
 

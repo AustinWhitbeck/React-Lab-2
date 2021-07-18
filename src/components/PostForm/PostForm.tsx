@@ -31,11 +31,11 @@ function PostForm({onSubmit}: Props){
                     <button className="closeButton"><AiFillCloseCircle size={40}/> </button>
                 </div>
                 <div className="postFields">
-                    <label htmlFor="post-title">Title</label>
+                    <label className="form-labels" htmlFor="post-title">Title</label>
                     <input className="inputTitle" type="text" name="post-title" id="post-title" value={title} onChange={ (e) => setTitle(e.target.value) }/>
                 </div>
                 <div className="postFields">
-                    <label htmlFor="post-thought">Thought</label>
+                    <label className="form-labels" htmlFor="post-thought">Thought</label>
                     <input className="inputThought" type="text" name="post-thought" id="post-thought" value={thought} onChange={ (e) => setThought(e.target.value) }/>
                 </div>
                 <button className="addPostButton" type="submit">Add Post</button>
