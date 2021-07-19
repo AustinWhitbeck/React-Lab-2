@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react";
 import Post from "../../model/Post";
 import './PostForm.css';
 import { AiFillCloseCircle } from 'react-icons/ai';
+import Modal from 'react-modal';
 
 interface Props {
     onSubmit: (post: Post) => void;
@@ -9,7 +10,7 @@ interface Props {
 }
 
 
-function PostForm({onSubmit}: Props){
+function PostForm({onSubmit, onClose}: Props){
 
     const [title, setTitle] = useState('');
 
@@ -26,9 +27,10 @@ function PostForm({onSubmit}: Props){
     }
 
     return(
+        <div className="modalBackground">
             <form className="PostForm" action="submit" onSubmit={handleSubmit}>
                 <div className="closeButtonContainer">
-                    <button className="closeButton"><AiFillCloseCircle size={40}/> </button>
+                    <button className="closeButton" onClick={() => onClose()}> <AiFillCloseCircle size={40}/> </button>
                 </div>
                 <div className="postFields">
                     <label className="form-labels" htmlFor="post-title">Title</label>
@@ -40,6 +42,7 @@ function PostForm({onSubmit}: Props){
                 </div>
                 <button className="addPostButton" type="submit">Add Post</button>
             </form>
+        </div>
     )
 }
 

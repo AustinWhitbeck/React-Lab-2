@@ -3,8 +3,22 @@ import  Post  from '../../model/Post';
 import PostForm from '../PostForm/PostForm';
 import PostInList from '../PostInList/PostInList';
 import './SocialPosts.css';
+import Modal from 'react-modal';
 
 
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      backgroundColor: '#79c5e8',
+      borderRadius: '20px',
+      padding: '30px'
+    },
+  };
 
 
 function SocialPosts(){
@@ -13,13 +27,6 @@ function SocialPosts(){
 
     const [formVisible, setFormVisible] = useState(false);
 
-    let hidden = '';
-
-    if (formVisible) {
-        hidden = 'socialForm';
-    } else {
-        hidden = 'hidden';
-    }
 
     function handleAdd(socialPosts: Post){
         setSocialPosts( prevPosts => [
@@ -45,13 +52,15 @@ function SocialPosts(){
     return(
         <section className="SocialPosts">
             <h1 className="PostsTitle">Brainstorm</h1>
-            <button className="NewThoughtBtn" onClick={() => setFormVisible(!formVisible)}>New Thought</button>
-            <div className={hidden}>
+            <button className="NewThoughtBtn" onClick={() => setFormVisible(true)}>New Thought</button>
+            {/* <div className={hidden}> */}
+            
+            <Modal isOpen={formVisible} style={customStyles} onRequestClose={() => setFormVisible(false)}>
                 <PostForm 
                 onSubmit={ handleAdd }
                 onClose={ handleClose }
                 />
-            </div>
+            </Modal>
             <div className="postsContainer">
                 {socialPosts.map((post, index) => 
                 <PostInList
